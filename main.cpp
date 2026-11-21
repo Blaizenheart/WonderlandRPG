@@ -1,7 +1,10 @@
 #include <iostream>
 using namespace std;
 int main() {
-    // initial commit
-    cout << "Hello World!" << endl;
+    bool playing = true;
+    while (playing){
+        cout << "HelloWorld" << endl;
+    }
+    cout << "not plying" << endl;
     return 0;
 }
