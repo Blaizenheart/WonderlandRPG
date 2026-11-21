@@ -56,3 +56,20 @@ void NPC::setDialogueSize(int size) {
 void NPC::setDialogueDone(bool done) {
     this->dialogueDone = done;
 }
+
+string nextDialogue() { // should be called from the main function to print dialogue
+    string temp = dialogue.at(dialogueIndex);
+    dialogueIndex++;
+    if (dialogueIndex > dialogueSize - 1) {
+        dialogueIndex = 0;
+        dialogueDone = true;
+    }
+}
+
+bool isDone() {
+    bool result = dialogueDone;
+    if (dialogueDone == true) {
+        dialogueDone = false;
+    }
+    return result;
+}
