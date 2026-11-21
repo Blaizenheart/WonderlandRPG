@@ -16,16 +16,17 @@ class Room{
         string description;
         vector<string> paths;
         vector<Item> items;
-        // vector<NPC> npcs;
+        vector<NPC> npcs;
         int encounterChance;
         // vector<Enemy> encounterPool;
     public:
-        Room(string name, string description, vector<string> paths, vector<Item> items, int encounterChance); // UPDATE LATER
+        // make a default constructor lator
+        Room(string name, string description, vector<string> paths, vector<Item> items, vector<NPC> npcs, int encounterChance); // UPDATE LATER
         string getName() const;
         string getDescription() const;
         vector<string> getPaths() const;
         vector<Item> getItems() const;
-        //vector<NPC> getNPCS() const;
+        vector<NPC> getNPCS() const;
         int getEncounterChance() const;
         //vector<Enemy> getEncounterPool() const;
         void setName(string name);

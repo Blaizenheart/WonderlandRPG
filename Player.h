@@ -15,6 +15,7 @@ private:
     int currSta;
     int maxSta;
 public:
+    Player(string name, string description, string suit, int rank, int color, int currHP, int maxHP, int critChance, int critBoost, bool alive, Vector<Item> items, Weapon weapon, int currSta, int maxSta);
     void addItem(Item i);
     void removeItem(Item i);
     bool hasItem(Item i);
