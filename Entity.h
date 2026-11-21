@@ -24,17 +24,17 @@ class Entity {
         string getDescription();\
         string getSuit();
         int getRank();
-        int setRank();
         int getColor();
         int getCurrHP();
-        int setCurrHP();
         int getMaxHP();
-        int setMaxHP();
         int getCritChance();
-        int setCritChance();
         double getCritBoost();
-        double setCritBoost();
         bool getAlive();
+        int setRank();
+        int setCurrHP();
+        int setMaxHP();
+        int setCritChance();
+        double setCritBoost();
        /* vector<Status> getStatus();
         vector<Status> addStatus();
         vector<Status> updateStatus();*/
