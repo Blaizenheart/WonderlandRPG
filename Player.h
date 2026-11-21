@@ -19,7 +19,7 @@ public:
     void RemoveItem(Item i);
     bool hasItem(Item i);
     Weapon getWeapon();
-    setWeapon(Weapon W);
+    void setWeapon(Weapon W);
 };
 
 
