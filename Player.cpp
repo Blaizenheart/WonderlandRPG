@@ -3,6 +3,23 @@
 //
 #include "Player.h"
 
+Player::Player() {
+    this->name = "Alice";
+    this->description = "A lost girl.";
+    this->suit = "NO SUIT";
+    this->rank = 1;
+    this->color = "NO COLOR";
+    this->currHP = 15;
+    this->maxHP = 15;
+    this->critChance = 2;
+    this->critBoost = 2;
+    this->alive = true;
+    this->currSta = 10;
+    this->maxSta = 10;
+    this->weapon = Weapon();
+    this->items = vector<Item>();
+}
+
 Player::Player(string name, string description, string suit, int rank, int color, int currHP, int maxHP, int critChance, int critBoost, bool alive, Vector<Item> items, Weapon weapon, int currSta, int maxSta) : Entity(name, description, suit, rank, color, currHP, maxHP, critChance, critBoost, alive), Player(items, weapon, currSta, maxSta) {
     this->name = name;
     this->description = description;
