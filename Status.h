@@ -17,5 +17,7 @@ class Status {
         int getDuration() const;
         void setName(string name);
         void setDuration(int duration);
+        void reduceDuration(int n);
+        void increaseDuration(int n);
 };
 #endif //WONDERLANDRPG_STATUS_H
