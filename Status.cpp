@@ -28,3 +28,13 @@ void Status::setName(string name) {
 void Status::setDuration(int duration) {
     this->duration = duration;
 }
+void Status::reduceDuration(int n) {
+    if (n<=-0) {
+        duration = 0;
+    }else {
+        duration -= n;
+    }
+}
+void Status::increaseDuration(int n) {
+    duration += n;
+}

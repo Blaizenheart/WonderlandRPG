@@ -26,7 +26,8 @@ void Player::addItem(Item i) {
 void Player::removeItem(Item i) {
     for (int j = 0; j < items.size();) {
         if (items.at(j).getName() == i.getName()) {
-            i.erase(j);
+            items.erase(j);
+            j=items.size();
         }
         j++;
     }
