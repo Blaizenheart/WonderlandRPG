@@ -8,8 +8,35 @@ using namespace std;
 class Entity {
     private:
         string name;
+        string description;
+        string suit;
+        int rank;
+        int color;
+        int currHP;
+        int maxHP;
+        int critChance;
+        double critBoost;
+        bool alive;
+    // vector<Status> status;
     public:
         Entity(string name);
         string getName();
+        string getDescription();\
+        string getSuit();
+        int getRank();
+        int setRank();
+        int getColor();
+        int getCurrHP();
+        int setCurrHP();
+        int getMaxHP();
+        int setMaxHP();
+        int getCritChance();
+        int setCritChance();
+        double getCritBoost();
+        double setCritBoost();
+        bool getAlive();
+       /* vector<Status> getStatus();
+        vector<Status> addStatus();
+        vector<Status> updateStatus();*/
 };
 #endif //WONDERLANDRPG_ENTITY_H
