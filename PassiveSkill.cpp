@@ -4,7 +4,7 @@
 
 #include "PassiveSkill.h"
 
-PassiveSkill::PassiveSkill(string name, string description) {
+PassiveSkill::PassiveSkill(string name, string description) : Skill(name, description) {
     this->name = name;
     this->description = description;
 }
