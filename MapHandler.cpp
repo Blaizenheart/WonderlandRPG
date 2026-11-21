@@ -46,7 +46,6 @@ class MapHandler {
             } else {
                 roomDataVec.push_back({location->getName(), location->getDescription(), location->getPaths(),
                 location->getItems(), location->getNPCS(), location->getEncounterChance(), location->getEncounterPool()});
-
             }
         }
 
@@ -64,8 +63,8 @@ class MapHandler {
             }
             if (roomSaved) {
                 // create a new room based on the saved parameters
-                location = new Room(roomDataVec.at(i).name, roomDataVec.at(i).description, roomDataVec.at(i).paths,
-                    roomDataVec.at(i).items, roomDataVec.at(i).encounterChance, roomDataVec.at(i).encounterPool);
+                location = new Room(roomDataVec.at(saveIndex).name, roomDataVec.at(saveIndex).description, roomDataVec.at(saveIndex).paths,
+                    roomDataVec.at(saveIndex).items, roomDataVec.at(saveIndex).npcs, roomDataVec.at(saveIndex).encounterChance, roomDataVec.at(saveIndex).encounterPool);
             } else { // create the original instance of the room
                 // location = new RoomFactory.create(string name);
             }
