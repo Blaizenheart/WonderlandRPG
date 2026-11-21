@@ -30,11 +30,11 @@ class Entity {
         int getCritChance();
         double getCritBoost();
         bool isAlive();
-        int setRank();
-        int setCurrHP();
-        int setMaxHP();
-        int setCritChance();
-        double setCritBoost();
+        void setRank(int rank);
+        void setCurrHP(int currHP);
+        void setMaxHP(int maxHP);
+        void setCritChance(int critChance);
+        void setCritBoost(int critBoost);
        /* vector<Status> getStatus();
         vector<Status> addStatus();
         vector<Status> updateStatus();*/
