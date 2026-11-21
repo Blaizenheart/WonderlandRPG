@@ -6,6 +6,7 @@
 #define WONDERLANDRPG_ROOM_H
 #include <string>
 #include <vector>
+#include <fstream>
 #include "Item.h"
 #include "NPC.h"
 #include "Enemy.h"
