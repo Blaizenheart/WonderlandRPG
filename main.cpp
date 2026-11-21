@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Room.h"
 using namespace std;
 
 enum Mode {STORY, ENDLESS};
@@ -8,6 +9,7 @@ static int input = 0;
 static bool validInput = false;
 static Mode gameMode = STORY;
 static State gameState = EXPLORATION;
+static Room* location = nullptr;
 
 static void explorationMode();
 static void combatMode();
@@ -76,7 +78,7 @@ static void explorationMode() {
                 case 1:
                     cout << "What would you like to inspect?" << endl;
                     // ADD CODE
-                    // location
+                    // location has: items, npcs, paths
                     break;
                 case 2:
                     cout << "Where would you like to move?" << endl;

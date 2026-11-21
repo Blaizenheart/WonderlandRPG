@@ -16,7 +16,7 @@ Player::Player(string name, string description, string suit, int rank, int color
     this->alive = alive;
     this->currSta = currSta;
     this->maxSta = maxSta;
-    this-> weapon = weapon;
+    this->weapon = weapon;
     this->items = items;
 }
 //Item functions

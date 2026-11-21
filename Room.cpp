@@ -67,3 +67,4 @@ void Room::setEncounterChance(int encounterChance) {
 void Room::setEnemies(vector<Enemy> encounterPool) {
     this->encounterPool = encounterPool;
 }
+
