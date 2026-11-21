@@ -3,13 +3,23 @@
 //
 #include "Room.h"
 // CONSTRUCTORS
-Room::Room(string name, string description, vector<string> paths, vector<Item> items, vector<string> npcs, int encounterChance) {
+Room::Room() {
+    this->name = "NO NAME";
+    this->description = "NO DESCRIPTION";
+    this->paths = vector<string>();
+    this->items = vector<Item>();
+    this->npcs = vector<NPC>();
+    this->encounterChance = -1;
+}
+
+Room::Room(string name, string description, vector<string> paths, vector<Item> items, vector<NPC> npcs, int encounterChance, vector<Enemy> encounterPool) {
     this->name = name;
     this->description = description;
     this->paths = paths;
     this->items = items;
     this->npcs = npcs;
     this->encounterChance = encounterChance;
+    this->encounterPool = encounterPool;
 }
 
 // GETTERS
@@ -31,7 +41,9 @@ vector<NPC> Room::getNPCS() const {
 int Room::getEncounterChance() const {
     return this->encounterChance;
 }
-//vector<Enemy> getEncounterPool() const;
+vector<Enemy> Room::getEncounterPool() const {
+    return this->encounterPool();
+}
 
 // SETTERS
 void Room::setName(string name) {
@@ -52,4 +64,6 @@ void Room::setNPCs(vector<NPC> npcs){
 void Room::setEncounterChance(int encounterChance) {
     this->encounterChance = encounterChance;
 }
-//void Room::setEnemies(vector<Enemy> encounterPool);
+void Room::setEnemies(vector<Enemy> encounterPool) {
+    this->encounterPool = encounterPool;
+}
