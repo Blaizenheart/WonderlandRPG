@@ -15,8 +15,8 @@ private:
     int currSta;
     int maxSta;
 public:
-    void AddItem(Item i);
-    void RemoveItem(Item i);
+    void addItem(Item i);
+    void removeItem(Item i);
     bool hasItem(Item i);
     Weapon getWeapon();
     void setWeapon(Weapon W);
