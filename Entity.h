@@ -6,7 +6,7 @@
 #include <string>
 using namespace std;
 class Entity {
-    private:
+    protected:
         string name;
         string description;
         string suit;

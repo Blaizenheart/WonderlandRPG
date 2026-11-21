@@ -11,16 +11,15 @@ using namespace std;
 
 class Enemy : public Entity{
     private:
-    double critChance;
     double successChance;
     string speak;
-    public:
-    double getCritChance();
+
+public:
+    Enemy(string name, string description, string suit, int rank, int color, int currHP, int maxHP, int critChance, int critBoost, bool alive, double successChance, string speak);
     double getSuccessChance();
-    void setCritChance(double critChance);
-    void setSuccessChance(double successChance);
+    void setSuccessChance(double sc);
     string getSpeak();
-    void setSpeak(string speak);
+    void setSpeak(string sp);
 
 
 };

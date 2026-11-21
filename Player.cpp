@@ -2,6 +2,7 @@
 // Created by Aubrey on 11/21/26.
 //
 #include "Player.h"
+
 Player::Player(string name, string description, string suit, int rank, int color, int currHP, int maxHP, int critChance, int critBoost, bool alive, Vector<Item> items, Weapon weapon, int currSta, int maxSta) : Entity(name, description, suit, rank, color, currHP, maxHP, critChance, critBoost, alive), Player(items, weapon, currSta, maxSta) {
     this->name = name;
     this->description = description;
