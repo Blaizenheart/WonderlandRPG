@@ -30,6 +30,11 @@ class MapHandler {
             loadRoomData(location, getNextRoom(location, direction));
         }
 
+        void move(Room* location) {
+            // moves directly there
+            roomFactory.create(location, "");
+        }
+
         void saveRoomData(Room* location) {
             // check if previously saved
             bool roomSaved = false;

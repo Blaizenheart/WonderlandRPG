@@ -13,9 +13,7 @@ Item ItemFind::getDescription () const {
  }
 
 string ItemFind::pickUp(Player p) {
-     addItem(Item i);
-    string text =  + " added to inventory";
+     p.addItem(item);
+     string text = item.getName + " added to inventory.";
      return text;
-
 }
-

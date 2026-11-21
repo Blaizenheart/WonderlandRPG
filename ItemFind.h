@@ -7,21 +7,16 @@
 
 #include <string>
 #include "Player.h"
-#include "Item.h"
 
 using namespace std;
 
 class ItemFind {
     private:
         Item item;
-
     public:
         Item getName() const;
         Item getDescription() const;
         string pickUp(Player p);
-
 };
-
-
 
 #endif //WONDERLANDRPG_ITEMFIND_H
