@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Room.h"
+#include "MapHandler.cpp"
 using namespace std;
 
 enum Mode {STORY, ENDLESS};
@@ -10,6 +11,7 @@ static bool validInput = false;
 static Mode gameMode = STORY;
 static State gameState = EXPLORATION;
 static Room* location = nullptr;
+static MapHandler mapHandler; // will be used to handle movement
 
 static void explorationMode();
 static void combatMode();
@@ -85,7 +87,7 @@ static void explorationMode() {
                     // ADD CODE
                     // if location.getRoom()
                     // calls the MapHandler
-                    // cout << MapHandler.move(location, direction);
+                    // cout << mapHandler.move(location, direction);
                     break;
                 default:
                     cout << "Invalid input." << endl;
