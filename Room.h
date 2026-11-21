@@ -40,6 +40,7 @@ class Room{
         void setEnemies(vector<Enemy> encounterPool);
         void removeItem(Item i);
         string get();
+
 };
 
 #endif //WONDERLANDRPG_ROOM_H
