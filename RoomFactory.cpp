@@ -11,7 +11,7 @@ class RoomFactory {
         static void create(Room*& location, string name) { //(name, description, paths, item, npcs, encounter chance, encounterpool)
             // CREATE THE DEFAULT ROOM CORRESPONDING TO  NAME
             Room* tempRoom = nullptr;
-            if (name == "W1RM-1") {
+            if (name == "W1RM-1" || location == nullptr) {
                 tempRoom = new Room(name, "The grass is a pleasant green.", {"forward"},{},{},10,{});
             } else if (name == "W1RM-2") {
                 tempRoom = new Room();
