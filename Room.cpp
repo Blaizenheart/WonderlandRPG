@@ -3,11 +3,12 @@
 //
 #include "Room.h"
 // CONSTRUCTORS
-Room::Room(string name, string description, vector<string> paths, vector<Item> items, int encounterChance) {
+Room::Room(string name, string description, vector<string> paths, vector<Item> items, vector<string> npcs, int encounterChance) {
     this->name = name;
     this->description = description;
     this->paths = paths;
     this->items = items;
+    this->npcs = npcs;
     this->encounterChance = encounterChance;
 }
 
@@ -24,7 +25,9 @@ vector<string> Room::getPaths() const {
 vector<Item> Room::getItems() const {
     return this->items;
 }
-//vector<NPC> Room::getNPCS() const;
+vector<NPC> Room::getNPCS() const {
+    return this->npcs;
+}
 int Room::getEncounterChance() const {
     return this->encounterChance;
 }
@@ -43,7 +46,9 @@ void Room::setPaths(vector<string> paths) {
 void Room::setItems(vector<Item> items) {
     this->items = items;
 }
-//void Room::setNPCs(vector<NPC> npcs);
+void Room::setNPCs(vector<NPC> npcs){
+    this->npcs = npcs;
+}
 void Room::setEncounterChance(int encounterChance) {
     this->encounterChance = encounterChance;
 }
