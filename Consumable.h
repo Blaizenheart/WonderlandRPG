@@ -12,7 +12,6 @@ class Consumable : public Item {
     public:
         Consumable();
         Consumable(const string& name, const string& description);
-
         static string use(const string& name);
 };
 

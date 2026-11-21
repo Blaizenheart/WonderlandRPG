@@ -5,8 +5,8 @@
 #include "Item.h"
 
 Item::Item() {
-    this-> name = "noname";
-    this-> description = "none";
+    this-> name = "NO NAME";
+    this-> description = "NO DESCRIPTION";
 }
 
 Item::Item(const string& n, const string& d) {
