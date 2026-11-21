@@ -19,7 +19,7 @@ class Entity {
         bool alive;
     // vector<Status> status;
     public:
-        Entity(string name);
+        Entity(string name, string description, string suit, int rank, int color, int currHP, int maxHP, int critChance, int critBoost, bool alive);
         string getName();
         string getDescription();\
         string getSuit();
