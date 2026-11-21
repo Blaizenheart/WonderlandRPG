@@ -2,6 +2,7 @@
 // Created by shayl on 11/21/2026.
 //
 #include "Room.h"
+
 // CONSTRUCTORS
 Room::Room() {
     this->name = "NO NAME";
@@ -66,5 +67,86 @@ void Room::setEncounterChance(int encounterChance) {
 }
 void Room::setEnemies(vector<Enemy> encounterPool) {
     this->encounterPool = encounterPool;
+}
+
+void Room::removeItem(Item i) {
+    for (int j = 0; j < items.size();) {
+        if (items.at(j).getName() == i.getName()) {
+            items.erase(j);
+            j=items.size();
+        }
+        j++;
+    }
+}
+
+string Room::get() {
+    string temp;
+    //READ OUT ITEMS IN ROOM
+    if (items.size() > 0) {
+        temp = " There is a ";
+        for (int j = 0; j < items.size(); j++) {
+            string itemName = items.at(j).getName();
+            if (itemName[0] == 'a' || itemName[0] == 'e' || itemName[0] == 'i' || itemName[0] == 'o' || itemName[0] == 'u' ) {
+                temp+="an ";
+            }else {
+                temp+="a ";
+            }
+            temp += items.at(j).getName();
+            if (j<npcs.size()-1) {
+                temp += ", ";
+            }else {
+                temp+=", and ";
+            }
+        }
+        temp+=".";
+    }  else{
+        temp = " There are no items in the room.";
+    }
+    //READ OUT NPC IN ROOM
+    if (npcs.size() > 0) {
+        temp = " There is ";
+        for (int j = 0; j < npcs.size(); j++) {
+            string npcName = npcs.at(j).getName();
+            if (npcName[0] == 'A' || npcName[0] == 'E' || npcName[0] == 'I' || npcName[0] == 'O' || npcName[0] == 'U' ) {
+                temp+="an ";
+            }else {
+                temp+="a ";
+            }
+            temp += npcs.at(j).getName();
+            if (j<npcs.size()-1) {
+                temp += ", ";
+            }else {
+                temp+=", and ";
+            }
+        }
+        temp+=".";
+    }
+    else{
+        temp = " There aren't any people in the room.";
+    }
+    //READ OUT PATHS IN ROOM
+    if (paths.size() > 0) {
+        temp = " There is ";
+        for (int j = 0; j < paths.size(); j++) {
+            string pathName = paths.at(j);
+            if (pathName[0] == 'A' || pathName[0] == 'E' || pathName[0] == 'I' || pathName[0] == 'O' || pathName[0] == 'U' ) {
+                temp+="an ";
+            }else {
+                temp+="a ";
+            }
+            temp += paths.at(j);
+            if (j<paths.size()-1) {
+                temp += ", ";
+            }else {
+                temp+=", and ";
+            }
+        }
+        temp+=".";
+    }
+    else{
+        temp = " There are no paths in the room.";
+    }
+    return temp;
+
 }
 

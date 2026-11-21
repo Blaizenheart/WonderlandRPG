@@ -5,7 +5,7 @@
 #ifndef WONDERLANDRPG_PLAYER_H
 #define WONDERLANDRPG_PLAYER_H
 #include <string>
-
+#include <vector>
 #include "Entity.h"
 #include "Item.h"
 #include "Weapon.h"
@@ -13,12 +13,13 @@ using namespace std;
 
 class Player : public Entity {
 private:
-    Vector<Item> items;
+    vector<Item> items;
     Weapon weapon;
     int currSta;
     int maxSta;
 public:
-    Player(string name, string description, string suit, int rank, int color, int currHP, int maxHP, int critChance, int critBoost, bool alive, Vector<Item> items, Weapon weapon, int currSta, int maxSta);
+    Player();
+    Player(string name, string description, string suit, int rank, int color, int currHP, int maxHP, int critChance, int critBoost, bool alive, vector<Item> items, Weapon weapon, int currSta, int maxSta);
     void addItem(Item i);
     void removeItem(Item i);
     bool hasItem(Item i);

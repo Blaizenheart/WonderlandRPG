@@ -38,6 +38,9 @@ class Room{
         void setNPCs(vector<NPC> npcs);
         void setEncounterChance(int encounterChance);
         void setEnemies(vector<Enemy> encounterPool);
+        void removeItem(Item i);
+        string get();
+
 };
 
 #endif //WONDERLANDRPG_ROOM_H

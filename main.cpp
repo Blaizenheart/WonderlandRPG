@@ -1,5 +1,7 @@
 #include <iostream>
 #include "Room.h"
+#include "MapHandler.cpp"
+#include "Player.h"
 using namespace std;
 
 enum Mode {STORY, ENDLESS};
@@ -7,13 +9,19 @@ enum State {EXPLORATION, COMBAT, DIALOGUE};
 
 static int input = 0;
 static bool validInput = false;
+
 static Mode gameMode = STORY;
 static State gameState = EXPLORATION;
+
 static Room* location = nullptr;
+static MapHandler mapHandler; // will be used to handle movement
 
 static void explorationMode();
 static void combatMode();
 static void dialogueMode();
+
+static Player player = Player();
+
 
 int main() {
     // VARIABLES
@@ -34,6 +42,7 @@ int main() {
                 cout << "Starting story mode..." << endl;
                 gameMode = STORY;
                 validInput = true;
+                mapHandler.move(location); // nullptr should make it W1RM1 automatically
                 break;
             case 2:
                 cout << "Starting endless mode..." << endl;
@@ -64,8 +73,10 @@ static void explorationMode() {
     while (gameState == EXPLORATION) {
         system("CLS"); // clears the console
         // 1) Print description of current Room
+        // cout << location->getDescription() << endl;
 
         // 2) Print description of the objects/NPCs/paths
+        // cout << location->get();
 
         // 3) Prompt user for input
         cout << "What would you like to do?:" << endl;
@@ -82,10 +93,12 @@ static void explorationMode() {
                     break;
                 case 2:
                     cout << "Where would you like to move?" << endl;
-                    // ADD CODE
-                    // if location.getRoom()
+                    // vector<string> paths = location->getPaths();
+                    // for (int i = 0; i < paths.size(); i++){
+                    //
+                    // }
                     // calls the MapHandler
-                    // cout << MapHandler.move(location, direction);
+                    // mapHandler.move(location, direction);
                     break;
                 default:
                     cout << "Invalid input." << endl;
