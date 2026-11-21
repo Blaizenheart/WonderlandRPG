@@ -54,6 +54,12 @@ int main() {
         } else { // DIALOGUE
             dialogueMode();
         }
+    }
+    return 0;
+}
+
+static void explorationMode() {
+    while (gameState == EXPLORATION) {
         system("CLS"); // clears the console
         // 1) Print description of current Room
 
@@ -61,14 +67,30 @@ int main() {
 
         // 3) Prompt user for input
         cout << "What would you like to do?:" << endl;
+        cout << "1) Inspect" << endl;
+        cout << "2) Move" << endl;
+        // input validation
+        while (!validInput) {
+            cin >> input;
+            switch (input) {
+                case 1:
+                    cout << "What would you like to inspect?" << endl;
+                    // ADD CODE
+                    // location
+                    break;
+                case 2:
+                    cout << "Where would you like to move?" << endl;
+                    // ADD CODE
+                    // if location.getRoom()
+                    // calls the MapHandler
+                    // cout << MapHandler.move(location, direction);
+                    break;
+                default:
+                    cout << "Invalid input." << endl;
+                    break;
+            }
+        }
 
-    }
-    return 0;
-}
-
-static void explorationMode() {
-    while (gameState == EXPLORATION) {
-        cout << "exokkjhjg";
     }
 }
 void combatMode() {
