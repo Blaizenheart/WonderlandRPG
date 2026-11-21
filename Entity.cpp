@@ -33,7 +33,7 @@ int Entity::getCritChance() {
 double Entity::getCritBoost() {
     return critBoost;
 }
-bool Entity::getAlive() {
+bool Entity::isAlive() {
     return alive;
 }
 

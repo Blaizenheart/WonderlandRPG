@@ -29,7 +29,7 @@ class Entity {
         int getMaxHP();
         int getCritChance();
         double getCritBoost();
-        bool getAlive();
+        bool isAlive();
         int setRank();
         int setCurrHP();
         int setMaxHP();
