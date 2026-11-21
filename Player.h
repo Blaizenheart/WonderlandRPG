@@ -5,7 +5,10 @@
 #ifndef WONDERLANDRPG_PLAYER_H
 #define WONDERLANDRPG_PLAYER_H
 #include <string>
+
 #include "Entity.h"
+#include "Item.h"
+#include "Weapon.h"
 using namespace std;
 
 class Player : public Entity {
