@@ -11,6 +11,8 @@ Weapon::Weapon() : Item() {
 }
 
 Weapon::Weapon(const string &name, const string &description, const int &damage) : Item(name, description) {
+    this->name = name;
+    this->description = description;
     this->damage = damage;
 }
 
