@@ -4,6 +4,8 @@
 #ifndef WONDERLANDRPG_ENTITY_H
 #define WONDERLANDRPG_ENTITY_H
 #include <string>
+#include <vector>
+#include "Status.h"
 using namespace std;
 class Entity {
     protected:
@@ -17,9 +19,11 @@ class Entity {
         int critChance;
         double critBoost;
         bool alive;
-    // vector<Status> status;
+        vector<Status> statuses;
     public:
-        Entity(string name, string description, string suit, int rank, int color, int currHP, int maxHP, int critChance, int critBoost, bool alive);
+        Entity();
+        Entity(string name, string description, string suit, int rank, int color, int currHP, int maxHP, int critChance,
+            int critBoost, bool alive, vector<Status> statuses);
         string getName();
         string getDescription();\
         string getSuit();
@@ -30,13 +34,13 @@ class Entity {
         int getCritChance();
         double getCritBoost();
         bool isAlive();
+        vector<Status> getStatus();
         void setRank(int rank);
         void setCurrHP(int currHP);
         void setMaxHP(int maxHP);
         void setCritChance(int critChance);
         void setCritBoost(int critBoost);
-       /* vector<Status> getStatus();
-        vector<Status> addStatus();
-        vector<Status> updateStatus();*/
+        void addStatus(Status status);
+        //vector<Status> updateStatus();
 };
 #endif //WONDERLANDRPG_ENTITY_H

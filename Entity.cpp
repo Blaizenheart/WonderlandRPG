@@ -2,7 +2,24 @@
 // Created by Aubrey on 11/21/26.
 //
 #include "Entity.h"
-Entity::Entity(string name, string description, string suit, int rank, int color, int currHP, int maxHP, int critChance, int critBoost, bool alive) {
+
+// constructors
+Entity::Entity() {
+    this->name = "NO NAME";
+    this->description = "NO DESCRIPTION";
+    this->suit = "NO SUIT";
+    this->rank = -1;
+    this->color = -1;
+    this->currHP = -1;
+    this->maxHP = -1;
+    this->critChance = -1;
+    this->critBoost = -1;
+    this->alive = true;
+    this->statuses = vector<Status>();
+}
+
+Entity::Entity(string name, string description, string suit, int rank, int color, int currHP, int maxHP, int critChance,
+    int critBoost, bool alive, vector<Status> statuses) {
     this->name = name;
     this->description = description;
     this->suit = suit;
@@ -13,6 +30,7 @@ Entity::Entity(string name, string description, string suit, int rank, int color
     this->critChance = critChance;
     this->critBoost = critBoost;
     this->alive = alive;
+    this->statuses = statuses;
 }
 //get functions :3
 string Entity::getName() {
@@ -45,6 +63,9 @@ double Entity::getCritBoost() {
 bool Entity::isAlive() {
     return alive;
 }
+vector<Status> getStatus() {
+    return this->statuses;
+}
 
 //set functions .w.
 void Entity::setRank(int rank) {
@@ -62,3 +83,7 @@ void Entity::setCritChance(int critChance) {
 void Entity::setCritBoost(int critBoost) {
     this->critBoost = critBoost;
 }
+void addStatus(Status status) {
+    statuses.push_back(status);
+}
+// vector<Status> updateStatus();

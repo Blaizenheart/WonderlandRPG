@@ -4,15 +4,6 @@
 #include "Room.h"
 
 // CONSTRUCTORS
-Room::Room() {
-    this->name = "NO NAME";
-    this->description = "NO DESCRIPTION";
-    this->paths = vector<string>();
-    this->items = vector<Item>();
-    this->npcs = vector<NPC>();
-    this->encounterChance = -1;
-}
-
 Room::Room(string name, string description, vector<string> paths, vector<Item> items, vector<NPC> npcs, int encounterChance, vector<Enemy> encounterPool) {
     this->name = name;
     this->description = description;

@@ -19,10 +19,9 @@ static MapHandler mapHandler; // will be used to handle movement
 static void explorationMode();
 static void combatMode();
 static void dialogueMode();
-
-static Player player = Player();
-
-
+static Weapon w;
+static Player player = Player ("Alice", "", "",1,-1,15,15,
+    2,2,true,vector<Item>(), w,10,10,vector<Status>());
 int main() {
     // VARIABLES
     bool playing = true;

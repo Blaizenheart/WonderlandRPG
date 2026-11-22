@@ -12,6 +12,7 @@
 #include "Enemy.h"
 
 using namespace std;
+
 class Room{
     private:
         string name; // might just be used internally to identify the rooms
@@ -22,7 +23,6 @@ class Room{
         int encounterChance;
         vector<Enemy> encounterPool;
     public:
-        Room();
         Room(string name, string description, vector<string> paths, vector<Item> items, vector<NPC> npcs, int encounterChance, vector<Enemy> encounterPool);
         string getName() const;
         string getDescription() const;
@@ -40,7 +40,6 @@ class Room{
         void setEnemies(vector<Enemy> encounterPool);
         void removeItem(Item i);
         string get();
-
 };
 
 #endif //WONDERLANDRPG_ROOM_H
