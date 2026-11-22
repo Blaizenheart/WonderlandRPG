@@ -5,6 +5,8 @@
 #include "Weapon.h"
 
 Weapon::Weapon() : Item() {
+    name = "Nothing";
+    description = "Empty";
     damage = 0;
 }
 

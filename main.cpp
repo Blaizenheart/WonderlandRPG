@@ -27,6 +27,7 @@ int main() {
     bool playing = true;
 
     // prompt user for the gamemode
+
     cout << "WELCOME!" << endl;
     cout << "Wonderland is a text-based RPG that relies on numerical inputs to navigate the world." << endl;
     cout << "Would you like to play in Story or Endless mode?" << endl;
