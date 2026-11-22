@@ -4,23 +4,25 @@
 
 #include "Weapon.h"
 
-Weapon::Weapon() : Item() {
-    name = "Nothing";
-    description = "Empty";
-    damage = 0;
-}
+// Weapon::Weapon() : Item() {
+//     name = "Nothing";
+//     description = "Empty";
+//     damage = 0;
+// }
 
-Weapon::Weapon(const string &name, const string &description, const int &damage) : Item(name, description) {
+Weapon::Weapon(string name, string description, int damage) : Item(name, description) {
+    this->name = name;
+    this->description = description;
     this->name = name;
     this->description = description;
     this->damage = damage;
 }
 
-void Weapon::setDamage(const int& d) {
+void Weapon::setDamage(int d) {
     this->damage = d;
 }
 
-const int& Weapon::getDamage() const {
+int Weapon::getDamage() const {
     return this->damage;
 }
 

@@ -21,7 +21,7 @@ class Entity {
         bool alive;
         vector<Status> statuses;
     public:
-        Entity();
+        Entity() = default;
         Entity(string name, string description, string suit, int rank, int color, int currHP, int maxHP, int critChance,
             int critBoost, bool alive, vector<Status> statuses);
         string getName();

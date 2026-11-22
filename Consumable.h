@@ -5,13 +5,14 @@
 #ifndef WONDERLANDRPG_CONSUMABLE_H
 #define WONDERLANDRPG_CONSUMABLE_H
 #include <string>
-using namespace std;
 #include "Item.h"
+
+using namespace std;
 
 class Consumable : public Item {
     public:
         Consumable();
-        Consumable(const string& name, const string& description);
+        Consumable(string name, string description);
         static string use(const string& name);
 };
 

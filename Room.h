@@ -23,6 +23,7 @@ class Room{
         int encounterChance;
         vector<Enemy> encounterPool;
     public:
+        Room() = default;
         Room(string name, string description, vector<string> paths, vector<Item> items, vector<NPC> npcs, int encounterChance, vector<Enemy> encounterPool);
         string getName() const;
         string getDescription() const;

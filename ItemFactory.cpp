@@ -1,10 +1,13 @@
 //
 // Created by summe on 11/21/2026.
 //
-
-#include "Weapon.h"
-#include "Consumable.h"
-static Weapon A = Weapon("Two-Handed Broad-Sword", "(Biggest Stick on the Playground!); Permanent 5%(?) health increase plus 5% block", 5);
+//
+// #include "Weapon.h"
+// #include "Consumable.h"
+//
+// using namespace std;
+//
+/*static Weapon A = Weapon("Two-Handed Broad-Sword", "(Biggest Stick on the Playground!); Permanent 5%(?) health increase plus 5% block", 5);
 static Weapon B = Weapon("Rapier" , " (For nipping a problem in the bud!) Perma boost of 5% crit rate and 5% dodge" , 3);
 static Weapon C = Weapon("The Hunter's Crossbow" , "(Two birds one arrow!) Permanent boost of 10% crit dmg " , 8);
 static Weapon D = Weapon("Glass Shard", "(A young lady's looking glass) increase attack by 2" , 2);
@@ -14,4 +17,4 @@ static Consumable b = Consumable("Juice" , "(Drink Me!): Lends stat boost depend
 static Consumable c = Consumable("Whole Milk" , "(Big and Strong!): Lends a 15% damage boost to players dmg stat");
 static Consumable d = Consumable("Special Candy" , "(Sugar Rush!): Lends a substantial stamina boost percent to players base stamina stat.");
 static Consumable e = Consumable("Cheshire's Gift" , "Random stat boost and de-buff of 2 limited to 10-20% perma de-buff/ buff");
-
+*/

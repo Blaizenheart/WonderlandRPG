@@ -1,7 +1,11 @@
 #include <iostream>
+
+#include "Consumable.h"
 #include "Room.h"
 #include "MapHandler.cpp"
 #include "Player.h"
+#include "ItemFactory.cpp"
+#include "Item.h"
 using namespace std;
 
 enum Mode {STORY, ENDLESS};
@@ -13,19 +17,18 @@ static bool validInput = false;
 static Mode gameMode = STORY;
 static State gameState = EXPLORATION;
 
-static Room* location = nullptr;
 static MapHandler mapHandler; // will be used to handle movement
 
 static void explorationMode();
 static void combatMode();
 static void dialogueMode();
-static Weapon w;
-static Player player = Player ("Alice", "", "",1,-1,15,15,
-    2,2,true,vector<Item>(), w,10,10,vector<Status>());
+
 int main() {
     // VARIABLES
     bool playing = true;
+    Room* location = nullptr;
 
+    // Player player;
     // prompt user for the gamemode
 
     cout << "WELCOME!" << endl;

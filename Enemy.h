@@ -15,6 +15,7 @@ class Enemy : public Entity{
     string speak;
 
 public:
+    Enemy() = default;
     Enemy(string name, string description, string suit, int rank, int color, int currHP, int maxHP, int critChance, int critBoost, bool alive, double successChance, string speak);
     double getSuccessChance();
     void setSuccessChance(double sc);

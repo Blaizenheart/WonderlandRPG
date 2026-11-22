@@ -1,4 +1,36 @@
 cmake_minimum_required(VERSION 4.4)
 project(WonderlandRPG)
 
-
+add_executable(WonderlandRPG
+        main.cpp
+        ActiveSkill.cpp
+        ActiveSkill.h
+        Consumable.cpp
+        Consumable.h
+        Enemy.cpp
+        Enemy.h
+        Entity.cpp
+        Entity.h
+        Item.cpp
+        Item.h
+        ItemFactory.cpp
+        ItemFind.cpp
+        ItemFind.h
+        MapHandler.cpp
+        NPC.cpp
+        NPC.h
+        NPCFactory.cpp
+        PassiveSkill.cpp
+        PassiveSkill.h
+        Player.cpp
+        Player.h
+        Room.cpp
+        Room.h
+        RoomFactory.cpp
+        Skill.cpp
+        Skill.h
+        Status.cpp
+        Status.h
+        Weapon.cpp
+        Weapon.h
+)

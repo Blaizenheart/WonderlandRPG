@@ -10,7 +10,7 @@
 #include <string>
 
 using namespace std;
-static RoomFactory roomFactory;
+// static RoomFactory roomFactory;
 
 class MapHandler {
     private:
@@ -32,7 +32,7 @@ class MapHandler {
 
         void move(Room* location) {
             // moves directly there
-            roomFactory.create(location, "");
+            //roomFactory.create(location, "");
         }
 
         void saveRoomData(Room* location) {
@@ -77,7 +77,7 @@ class MapHandler {
                 location = new Room(roomDataVec.at(saveIndex).name, roomDataVec.at(saveIndex).description, roomDataVec.at(saveIndex).paths,
                     roomDataVec.at(saveIndex).items, roomDataVec.at(saveIndex).npcs, roomDataVec.at(saveIndex).encounterChance, roomDataVec.at(saveIndex).encounterPool);
             } else {
-                roomFactory.create(location, name);
+                //roomFactory.create(location, name);
             }
         }
 

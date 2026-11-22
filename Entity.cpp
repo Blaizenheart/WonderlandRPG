@@ -4,19 +4,19 @@
 #include "Entity.h"
 
 // constructors
-Entity::Entity() {
-    this->name = "NO NAME";
-    this->description = "NO DESCRIPTION";
-    this->suit = "NO SUIT";
-    this->rank = -1;
-    this->color = -1;
-    this->currHP = -1;
-    this->maxHP = -1;
-    this->critChance = -1;
-    this->critBoost = -1;
-    this->alive = true;
-    this->statuses = vector<Status>();
-}
+// Entity::Entity() {
+//     this->name = "NO NAME";
+//     this->description = "NO DESCRIPTION";
+//     this->suit = "NO SUIT";
+//     this->rank = -1;
+//     this->color = -1;
+//     this->currHP = -1;
+//     this->maxHP = -1;
+//     this->critChance = -1;
+//     this->critBoost = -1;
+//     this->alive = true;
+//     this->statuses = vector<Status>();
+// }
 
 Entity::Entity(string name, string description, string suit, int rank, int color, int currHP, int maxHP, int critChance,
     int critBoost, bool alive, vector<Status> statuses) {

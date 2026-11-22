@@ -12,13 +12,11 @@ using namespace std;
 class Weapon : public Item {
     private:
         int damage;
-
     public:
-        Weapon();
-        Weapon(const string &name, const string& description, const int &damage);
-        void setDamage(const int& damage);
-        const int& getDamage() const;
-
+        Weapon() = default;
+        Weapon(string name, string description, int damage);
+        void setDamage(int damage);
+        int getDamage() const;
 };
 
 #endif //WONDERLANDRPG_WEAPON_H

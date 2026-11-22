@@ -5,7 +5,7 @@
 #include "Room.h"
 
 using namespace std;
-
+/*
 class RoomFactory {
     public:
         static void create(Room*& location, string name) { //(name, description, paths, item, npcs, encounter chance, encounterpool)
@@ -45,3 +45,4 @@ class RoomFactory {
             location = tempRoom;
         }
 };
+*/

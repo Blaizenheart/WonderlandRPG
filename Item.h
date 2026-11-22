@@ -13,12 +13,12 @@ class Item {
         string name;
         string description;
     public:
-        Item();
-        Item(const string& name, const string& description);
-        const string& getName() const;
-        const string& getDescription() const;
-        void setDescription(const string& description);
-        void setName(const string& name);
+        Item() = default;
+        Item(string name, string description);
+        string getName() const;
+        string getDescription() const;
+        void setDescription(string description);
+        void setName(string name);
 };
 
 #endif //WONDERLANDRPG_ITEM_H

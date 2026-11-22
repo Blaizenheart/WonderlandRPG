@@ -18,6 +18,7 @@ private:
     int currSta;
     int maxSta;
 public:
+    Player() = default;
     Player(string name, string description, string suit, int rank, int color, int currHP, int maxHP, int critChance,
         int critBoost, bool alive, vector<Item> items, Weapon weapon, int currSta, int maxSta, vector<Status> statuses);
     void addItem(Item i);
