@@ -39,9 +39,9 @@ class RoomFactory {
                 tempRoom = new Room(name, "Alice finally reaches the edge of the woods, seeing a massive gate blocking her way.../n in front of her stands two... creatures to say the least.../n", {"forward"},{},{},10,{});
             } else if (name == "W1RM-11") {
                 tempRoom = new Room(name, "Unfortunately for Alice, she did not realize that if one Card master said that only one of them told the truth, and the other lies/n then if the other agrees, that means neither of them were telling the truth.../n a battle will commence.../n", {"forward"},{},{},10,{});
-            } else if (name == "W2RM-1") {
-                tempRoom = new Room();
-            }
+            }// else if (name == "W2RM-1") {
+            //     tempRoom = new Room();
+            // }
             location = tempRoom;
         }
 };
