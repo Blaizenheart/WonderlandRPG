@@ -6,6 +6,7 @@
 #define WONDERLANDRPG_NPC_H
 #include <string>
 #include <vector>
+#include <utility>
 using namespace std;
 class NPC {
     private:
